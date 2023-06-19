@@ -1,0 +1,4 @@
+1 : hello : False
+2 : i will kill you : True
+3 : just a test message : False
+4 : you piece of shit : False

@@ -1,0 +1,12 @@
+[
+    {
+        "msg_id": 1,
+        "msg_desc": "test1",
+        "msg_moderate_status": false
+    },
+    {
+        "msg_id": 2,
+        "msg_desc": "test2",
+        "msg_moderate_status": true
+    }
+]

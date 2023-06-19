@@ -1,0 +1,18 @@
+{
+  "source_type": "txt",
+  "api_key": "<<ADD YOUR API KEY HERE>>",
+  "api_url": "https://api.openai.com/v1/moderations",
+  "temperature" : 0.3,
+  "max_tokens" : 100,
+  "sources": {
+    "txt": {
+      "source": "C:\\Development\\Codebase\\Moderation\\Misc\\TestData\\messages.txt"
+    },
+    "msmq": {
+      "source": "one"
+    },
+    "api": {
+      "source": "http://127.0.0.1:8080/djangoapi/apisample/"
+    }
+  }
+}

@@ -1,5 +1,4 @@
-from Core import moderation
-
+from ContentModerationWithPython.Core import moderation
 def main():
     moderation.moderate()
 

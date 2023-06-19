@@ -1,4 +1,4 @@
-from Configuration import config
+from ContentModerationWithPython.Configuration import config
 import requests
 
 def openai_api_call(message):
@@ -8,6 +8,7 @@ def openai_api_call(message):
 
         api_url = config_pairs["api_url"]
         api_key = config_pairs["api_key"]
+        print(api_key)
         temperature = config_pairs["temperature"]
         max_tokens = config_pairs["max_tokens"]
 
@@ -21,6 +22,7 @@ def openai_api_call(message):
                                      "stop": ["###"]
                                  },
                                  verify=False)
+        print(response.json())
         if response.status_code != 200:
             results = "Error"
             # print("Error:", response.status_code, response.content)

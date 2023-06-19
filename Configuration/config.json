@@ -1,12 +1,12 @@
 {
-  "source_type": "txt",
-  "api_key": "<<ADD YOUR API KEY HERE>>",
+  "source_type": "msmq",
+  "api_key": "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",
   "api_url": "https://api.openai.com/v1/moderations",
   "temperature" : 0.3,
   "max_tokens" : 100,
   "sources": {
     "txt": {
-      "source": "C:\\Development\\Codebase\\Moderation\\Misc\\TestData\\messages.txt"
+      "source": "D:\\Technical\\Codebase\\Python\\ContentModerationUsingOpenAI\\ContentModerationWithPython\\Misc\\TestData\\messages.txt"
     },
     "msmq": {
       "source": "one"

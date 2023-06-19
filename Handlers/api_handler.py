@@ -1,5 +1,5 @@
 import requests
-from Handlers.base_handler import BaseHandler
+from ContentModerationWithPython.Handlers.base_handler import BaseHandler
 
 
 class ApiHandler(BaseHandler):

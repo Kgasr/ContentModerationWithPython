@@ -1,8 +1,8 @@
 import os
-from Configuration import config
-from ExternalAPI import api_client
-from Core.get_handler import get_handler
-from Core.formatter import format_input, format_output
+from ContentModerationWithPython.Configuration import config
+from ContentModerationWithPython.ExternalAPI import api_client
+from ContentModerationWithPython.Core.get_handler import get_handler
+from ContentModerationWithPython.Core.formatter import format_input, format_output
 
 def moderation_call(messages):
     moderation_flag = ""
@@ -21,11 +21,8 @@ def moderate():
 
     handler = get_handler(source_type, source)
     messages = handler.get_data()
-    print(messages)
     formatted_messages = format_input(messages, source_type)
-    print(formatted_messages)
-    """
     output = moderation_call(formatted_messages)
-    formatted_output = formatter.format_output(messages, formatted_messages, output, source_type)
+    formatted_output = format_output(messages, formatted_messages, output, source_type)
     handler.set_data(formatted_output)
-    """
+

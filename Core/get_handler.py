@@ -1,4 +1,4 @@
-from Handlers import api_handler,msmq_handler,text_file_handler
+from ContentModerationWithPython.Handlers import api_handler,msmq_handler,text_file_handler
 
 def get_handler(source_type, source):
     try:

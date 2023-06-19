@@ -33,7 +33,7 @@ def format_output(messages,formatted_messages,output, type):
                             messages_temp[i]['msg_processed'] = True
             i = i + 1
         return messages_temp
-    elif type == 'msmq' or type == 'file':
+    elif type == 'msmq' or type == 'txt':
         for msg in formatted_messages:
             arr = list(msg.keys())
             temp.append(str(arr[0]) + " : " + msg[arr[0]] + " : " + str(msg['moderation_status']))

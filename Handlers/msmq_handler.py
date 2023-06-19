@@ -1,7 +1,7 @@
 import os
 import win32com.client
 import pythoncom
-from Handlers.base_handler import BaseHandler
+from ContentModerationWithPython.Handlers.base_handler import BaseHandler
 
 
 class MsmqHandler(BaseHandler):
@@ -31,7 +31,7 @@ class MsmqHandler(BaseHandler):
             message = result[1] + " - Moderation Flag: " + result [2]
             queue_info = win32com.client.Dispatch("MSMQ.MSMQQueueInfo")
             computer_name = os.getenv('COMPUTERNAME')
-            queue_name = self.queue_name
+            queue_name = self.queue_name + ("_out")
             queue_info.FormatName = f'direct=os:{computer_name}\\PRIVATE$\\{queue_name}'
             queue = queue_info.Open(2, 0)
             msg = win32com.client.Dispatch("MSMQ.MSMQMessage")
